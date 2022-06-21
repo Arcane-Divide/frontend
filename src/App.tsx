@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import News from "./pages/News";
 import NewsUpdater from "./store/news/newsUpdater";
+import AdminPanel from "./pages/AdminPanel";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="blog" element={""} />
         <Route path="merch" element={""} />
         <Route path="tour" element={""} />
+        <Route path="admin" element={<AdminPanel />} />
       </Routes>
       <Footer />
     </ThemeProvider>

@@ -18,8 +18,14 @@ const News: FC = () => {
   return (
     <Container>
         <Box sx={{}}>
-            {posts.map((p) => {
-                return <PostComponent title={p.title} date={p.date} img={p.img} content={p.content} />
+            {posts.map((p, index) => {
+                return <PostComponent 
+                            key={index} 
+                            title={p.title} 
+                            date={p.date} 
+                            img={`http://localhost:3080/${p.img}`} 
+                            content={p.content} 
+                        />
             })}
         </Box>
     </Container>

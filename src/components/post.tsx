@@ -29,7 +29,7 @@ const Post: FC<PostProps> = (props) => {
                 </Grid>
                 <Divider orientation='horizontal' style={{width: '100%'}}/>
                 <Grid item xs={12} md={7} display='flex' justifyContent='center'>
-                    <p>{props.img}</p>
+                    <img src={props.img} />
                 </Grid>
                 {matches ? 
                 <Divider flexItem orientation='vertical' />
