@@ -9,14 +9,13 @@ const Footer: FC = () => {
   return (
     <Box
       style={{
-        position: "fixed",
-        bottom: 0,
+        position: "sticky",
         height: "4em",
         background: "#000000",
         width: "100%",
         color: "gray",
       }}
-      sx={{ pl: 5, pt: 2.5 }}
+      sx={{ pl: 5, pt: 2.5, mt: 'auto' }}
     >
       <Grid container >
         <Grid item sx={{ display: "flex", flexGrow: 1 }}>

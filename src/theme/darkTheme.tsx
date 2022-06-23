@@ -7,6 +7,10 @@ const darkTheme = createTheme({
     secondary: {
         main: '#000000',
     },
+    action: {
+      disabledBackground: '#595959',
+      disabled: '#9fa19f'
+    }
   },
   typography: {
     fontFamily: "Prompt",

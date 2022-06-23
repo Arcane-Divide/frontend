@@ -10,6 +10,12 @@ import Footer from "./components/Footer";
 import News from "./pages/News";
 import NewsUpdater from "./store/news/newsUpdater";
 import AdminPanel from "./pages/AdminPanel";
+import Tour from "./pages/Tour";
+import Merch from "./pages/Merch";
+import Blog from "./pages/Blog";
+import CreateNews from './pages/CreateNews';
+
+
 
 const App = () => {
   return (
@@ -20,10 +26,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="news" element={<News />} />
-        <Route path="blog" element={""} />
-        <Route path="merch" element={""} />
-        <Route path="tour" element={""} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="merch" element={<Merch />} />
+        <Route path="tour" element={<Tour />} />
         <Route path="admin" element={<AdminPanel />} />
+        <Route path="admin/create_news_post" element={<CreateNews />} />
       </Routes>
       <Footer />
     </ThemeProvider>

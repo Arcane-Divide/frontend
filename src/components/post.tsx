@@ -1,5 +1,6 @@
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React, {FC} from 'react';
+import image from '../assets/img/bgImg.jpeg';
 
 interface PostProps {
     title: string;
@@ -15,7 +16,7 @@ const Post: FC<PostProps> = (props) => {
     const matches = useMediaQuery(theme.breakpoints.up('md'))
 
     return (
-        <Box sx={{flexGrow: 1, bgcolor: 'background.paper'}}>
+        <Box sx={{flexGrow: 1}} >
             <Grid container >
                 <Grid item xs={12} md={12}>
                     <Typography variant='h3'>
@@ -28,15 +29,15 @@ const Post: FC<PostProps> = (props) => {
                     </Typography>
                 </Grid>
                 <Divider orientation='horizontal' style={{width: '100%'}}/>
-                <Grid item xs={12} md={7} display='flex' justifyContent='center'>
-                    <img src={props.img} />
+                <Grid item xs={12} md={7} display='flex' justifyContent='center' sx={{ }} >
+                    <img width='100%' src={props.img} />
                 </Grid>
                 {matches ? 
                 <Divider flexItem orientation='vertical' />
                 :
                 <Divider orientation='horizontal' style={{width: '100%'}}/>
                 }
-                <Grid item xs={12} md={4} display='flex' justifyContent='center'>
+                <Grid item xs={12} md={4} display='flex' justifyContent='center' sx={{pl: '2em'}}>
                     <p>{props.content}</p>
                 </Grid>
             </Grid>
